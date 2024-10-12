@@ -2,94 +2,54 @@
 
 ## About
 
-This project aims to explore the Amazon Sales data to understand top performing branches and products, sales trend of of different products, customer behaviour. The aims is to study how sales strategies can be improved and optimized. The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
-
+This project aims to explore the Amazon Sales data to understand top performing branches and products, sales trend of of different products, customer behaviour. The aims is to study how sales strategies can be improved and optimized. 
 
 
 ## Purposes Of The Project
 
 The major aim of thie project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
 
-## About Data
-
-The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting). This dataset contains sales transactions from a three different branches of Walmart, respectively located in Mandalay, Yangon and Naypyitaw. The data contains 17 columns and 1000 rows:(invoice_id ,branch ,city ,customer_type ,gender,product_line , unit_price , quantity,VAT ,total,date,time, payment_method,cogs, gross_margin_percentage , gross_income, rating )
-
-
-### Analysis List
-
-1. Product Analysis
-
-> Conduct analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
-
-2. Sales Analysis
-
-> This analysis aims to answer the question of the sales trends of product. The result of this can help use measure the effectiveness of each sales strategy the business applies and what modificatoins are needed to gain more sales.
-
-3. Customer Analysis
-
-> This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
 
 ## Approach Used
 
 1. **Data Wrangling:** This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
 
-> 1. Build a database
-> 2. Create table and insert the data.
-> 3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set **NOT NULL** for each field, hence null values are filtered out.
 
-2. **Feature Engineering:** This will help use generate some new columns from existing ones.
+2. **Feature Engineering:** This will help use generate some new columns from existing ones and Change data types.
 
-> 1. Add a new column named `time_of_day` to give insight of sales in the Morning, Afternoon and Evening. This will help answer the question on which part of the day most sales are made.
+> 1. Add a new column named 'ProcessingTime' This column provides information about the time taken to process an order from the order_date to the ship_date.
 
-> 2. Add a new column named `day_name` that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
+> 2. change data type of columns Ship date and Order date from object to datetime
 
-> 3. Add a new column named `month_name` that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.
 
 2. **Exploratory Data Analysis (EDA):** Exploratory data analysis is done to answer the listed questions and aims of this project.
 
-3. **Conclusion:**
+
 
 ## Business Questions To Answer
 
-### Generic Question
 
-1. How many unique cities does the data have?
-2. In which city is each branch?
+1. Which regions have the highest total sales revenue?
+2. What is the average unit price and unit cost for each item type?
+3.Which country has the highest total profit?
+4. Which country has the highest total profit?
+5.What is the average order processing time (duration between order and ship dates) for each sales channel?
+6. Which item types have the highest and lowest total sales?
+7. How does the order priority vary across different regions?
+8. What is the correlation between unit price and total profit?
+9. Are there any seasonal trends or patterns in the sales data?
+10. How does the number of units sold vary across different countries?
+11.How does the total sales revenue vary across different countries?
+12. What is the distribution of unit prices for each item type?
+13. Which sales channel has the highest average unit price?
+14. Are there any outliers in the total cost distribution?
+15. How does the total profit vary across different item types?
+16. What is the average order processing time for each country?
+17.Which region has the highest average total revenue per order?
+18. Is there a relationship between the number of units sold and the total profit?
+19. How does the order priority vary based on the item type?
+20. Are there any trends or patterns in the order dates?
 
-### Product
-
-1. How many unique product lines does the data have?
-2. What is the most common payment method?
-3. What is the most selling product line?
-4. What is the total revenue by month?
-5. What month had the largest COGS?
-6. What product line had the largest revenue?
-5. What is the city with the largest revenue?
-6. What product line had the largest VAT?
-7. Fetch each product line and add a column to those product line showing "Good", "Bad". Good if its greater than average sales
-8. Which branch sold more products than average product sold?
-9. What is the most common product line by gender?
-12. What is the average rating of each product line?
-
-### Sales
-
-1. Number of sales made in each time of the day per weekday
-2. Which of the customer types brings the most revenue?
-3. Which city has the largest tax percent/ VAT (**Value Added Tax**)?
-4. Which customer type pays the most in VAT?
-
-### Customer
-
-1. How many unique customer types does the data have?
-2. How many unique payment methods does the data have?
-3. What is the most common customer type?
-4. Which customer type buys the most?
-5. What is the gender of most of the customers?
-6. What is the gender distribution per branch?
-7. Which time of the day do customers give most ratings?
-8. Which time of the day do customers give most ratings per branch?
-9. Which day fo the week has the best avg ratings?
-10. Which day of the week has the best average ratings per branch?
 
 
 # Amazon-Sales-Analysis
